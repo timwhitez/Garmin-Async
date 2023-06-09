@@ -10,7 +10,7 @@ import (
 	"time"
 )
 
-// 请务必先在网站上已成功添加佳明国内与国际账号
+// 请务必先在网站上成功添加佳明国内与国际账号
 // 填写在dailysync.vyzt.dev操作同步时抓包获取到的userid与token
 
 var UserId = ""
