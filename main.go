@@ -27,9 +27,15 @@ func main() {
 		}
 	}
 	for {
-		sendFunc()
-		time.Sleep(time.Duration(freq) * time.Hour)
-	}
+    		sendFunc()
+    		hour := time.Now().Hour()
+    		if hour >= 0 && hour < 6 {
+    			// we must sleep in this time
+    			time.Sleep(time.Duration(6-int(hour)) * time.Hour)
+    		} else {
+    			time.Sleep(time.Duration(freq) * time.Hour)
+    		}
+    	}
 }
 
 func sendFunc() {
